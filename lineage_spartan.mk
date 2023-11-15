@@ -11,10 +11,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from spartan device
 $(call inherit-product, device/realme/spartan/device.mk)
 
-# Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common SuperiorOS stuff.
+$(call inherit-product, vendor/superior/config/common.mk)
 
-PRODUCT_NAME := lineage_spartan
+PRODUCT_NAME := superior_spartan
 PRODUCT_DEVICE := spartan
 PRODUCT_MANUFACTURER := realme
 PRODUCT_BRAND := realme
@@ -31,7 +31,7 @@ TARGET_FACE_UNLOCK_SUPPORTED := true
 TARGET_SUPPORTS_QUICK_TAP := true
 
 # GAPPS
-WITH_GAPPS := true
+BUILD_WITH_GAPPS := true
 TARGET_INCLUDE_GOOGLE_TELEPHONY := false
 TARGET_INCLUDE_PIXEL_FRAMEWORK := true
 TARGET_INCLUDE_GOOGLE_CAMERA := false
@@ -45,8 +45,10 @@ TARGET_INCLUDE_MATLOG := false
 TARGET_DEFAULT_ADB_ENABLED := true
 
 # Maintainer
-ALPHA_BUILD_TYPE := Unofficial
-ALPHA_MAINTAINER := RohanVIRUS
+PRODUCT_SYSTEM_PROPERTIES += \
+     ro.spos.maintainer=RohanVIRUS
+PRODUCT_PROPERTY_OVERRIDES += \
+        ro.superior.maintainer=RohanVIRUS
 PRODUCT_GMS_CLIENTID_BASE := android-oppo
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
@@ -56,4 +58,4 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 
 BUILD_FINGERPRINT := realme/RMX3371/RE54E4L1:13/TP1A.220905.001/S.cd290a_d5d0-4:user/release-keys
 
-EXTRA_UDFPS_ANIMATIONS := true
+SUPERIOR_UDFPS_ANIMATIONS := true
