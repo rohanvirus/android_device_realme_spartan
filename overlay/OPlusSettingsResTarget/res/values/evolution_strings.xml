@@ -11,6 +11,6 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="maintainer_name">YOGRaJ(yograjfire18)</string>
-    <string name="maintainer_telegram" translatable="false">https://t.me/yograjfire18</string>
+    <string name="build_maintainer_summary">RohanVIRUS</string>
+    <string name="build_maintainer_telegram" translatable="false">https://t.me/rohanvirus</string>
 </resources>
